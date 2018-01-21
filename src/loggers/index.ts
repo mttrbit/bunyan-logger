@@ -9,6 +9,6 @@ export {
   contextSerializer,
   errorSerializer,
   Headers,
-} from './lambda.loggers';
+} from './lambda.logger';
 
 export { DebugLogger, getDebugStream, DebugLoggerSettings } from './debug.logger';
