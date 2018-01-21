@@ -1,4 +1,4 @@
-# bunyan-logger
+# bunyan-logger ![badge](https://travis-ci.org/mttrbit/bunyan-logger.svg?branch=master)
 
 ## Introduction
 
