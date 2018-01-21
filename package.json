@@ -1,5 +1,5 @@
 {
-  "name": "mttrbit/bunyan-logger",
+  "name": "@mttrbit/bunyan-logger",
   "version": "1.0.0",
   "description": "A typescript library for logging.",
   "main": "dist/index.js",
