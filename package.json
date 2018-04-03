@@ -28,6 +28,8 @@
   "license": "ISC",
   "homepage": "https://github.com/mttrbit/bunyan-logger#readme",
   "devDependencies": {
+    "@types/aws-lambda": "^0.0.10",
+    "@types/bunyan": "^1.8.2",
     "@types/chai": "^3.5.2",
     "@types/mocha": "^2.2.41",
     "@types/node": "^7.0.5",
@@ -46,8 +48,6 @@
     "typescript": "^2.4.2"
   },
   "dependencies": {
-    "@types/aws-lambda": "^0.0.10",
-    "@types/bunyan": "^1.8.2",
     "bunyan": "^1.8.12",
     "bunyan-debug-stream": "^1.0.8",
     "bunyan-prettystream": "^0.1.3",
