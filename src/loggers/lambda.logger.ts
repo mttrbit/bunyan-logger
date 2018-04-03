@@ -1,5 +1,7 @@
 import * as Logger from 'bunyan';
-import * as _ from 'lodash';
+import * as omit from 'lodash.omit';
+import * as isObject from 'lodash.isobject';
+import * as assign from 'lodash.assign';
 import { Context, APIGatewayEvent } from 'aws-lambda';
 
 import { getSettingsLevel } from '../core';
@@ -14,16 +16,16 @@ type LoggedContext = {
 export type Headers = { [name: string]: string };
 
 export function contextSerializer(context) {
-  return _.omit(context, ['log', 'child']);
+  return omit(context, ['log', 'child']);
 }
 
 export function errorSerializer(err) {
   const bunyanError = Logger.stdSerializers.err(err);
-  if (!_.isObject(err) || !_.isObject(bunyanError)) {
+  if (!isObject(err) || !isObject(bunyanError)) {
     return bunyanError;
   }
 
-  return _.assign({}, err, bunyanError);
+  return assign({}, err, bunyanError);
 }
 
 function makeLogger({
